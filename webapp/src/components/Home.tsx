@@ -1,16 +1,5 @@
-import { useAccount } from "wagmi";
-import { NavBar } from "./nav-bar";
-
 export function Home() {
-  const { address } = useAccount();
-
-  return (
-    <div>
-      <NavBar />
-      <div>{address ? address : null}</div>
-      <div className="bg-red-600">TEST</div>
-    </div>
-  );
+  return <div className="min-h-screen bg-gray-50 dark:bg-gray-900">HOME</div>;
 }
 
 export default Home;

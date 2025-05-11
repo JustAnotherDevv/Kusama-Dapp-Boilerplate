@@ -1,16 +1,18 @@
+import "@rainbow-me/rainbowkit/styles.css";
 import { ExtensionProvider } from "./polkadot-extension-provider";
 import { LightClientApiProvider } from "./lightclient-api-provider";
-
-import { http, createConfig, webSocket } from "wagmi";
 import { westendAssetHub } from "wagmi/chains";
 import { WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 
-export const config = createConfig({
+const WALLET_CONNECT = import.meta.env.VITE_WALLET_CONNECT;
+
+const config = getDefaultConfig({
+  appName: "Kusama Boilerplate",
+  projectId: WALLET_CONNECT,
   chains: [westendAssetHub],
-  transports: {
-    [westendAssetHub.id]: http(),
-  },
+  ssr: false,
 });
 
 const queryClient = new QueryClient();
@@ -21,7 +23,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <LightClientApiProvider>
         <WagmiProvider config={config}>
           <QueryClientProvider client={queryClient}>
-            {children}
+            <RainbowKitProvider>{children}</RainbowKitProvider>
           </QueryClientProvider>
         </WagmiProvider>
       </LightClientApiProvider>

@@ -1,11 +1,7 @@
-// import Link from "next/link";
-// import { ChevronDown } from "lucide-react";
-
-// import { NavMobileControl } from "./nav-mobile-control";
-// import { PolkadotLogo } from "../ui/polkadot-logo";
-// import { ThemeToggle } from "./theme-toggle";
+import { Link } from "react-router-dom";
 import { ChainSelect } from "./chain/chain-select";
 import { WalletSelect } from "./account/wallet-select";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export interface NavItem {
   title: string;
@@ -55,6 +51,7 @@ export function NavBar() {
           {/* Mobile menu control - includes both toggle button and menu */}
           <div className="md:hidden flex items-center gap-2">
             {/* <ThemeToggle /> */}
+            <ConnectButton />
             <ChainSelect />
             <WalletSelect />
             {/* <NavMobileControl items={navItems} /> */}
@@ -68,15 +65,14 @@ export function NavBar() {
                   {item.items && item.items.length > 0 ? (
                     <div className="flex cursor-pointer items-center gap-1 py-2 text-sm">
                       {item.title}
-                      {/* <ChevronDown className="size-4 transition-transform duration-200 group-hover:rotate-180" /> */}
                     </div>
                   ) : (
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="flex cursor-pointer items-center gap-1 py-2 text-sm"
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   )}
 
                   {/* Dropdown menu that appears on hover */}
@@ -84,13 +80,14 @@ export function NavBar() {
                     <div className="invisible absolute left-1/2 top-full z-50 min-w-[180px] -translate-x-1/2 rounded-md border bg-background p-2 opacity-0 shadow-md transition-all group-hover:visible group-hover:opacity-100">
                       <div className="flex flex-col space-y-1">
                         {item.items.map((subItem) => (
-                          <a
+                          <Link
+                            to={subItem.href || "#"}
                             key={subItem.title}
-                            href={subItem.href || "#"}
+                            // href={subItem.href || "#"}
                             className="rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
                           >
                             {subItem.title}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -103,6 +100,7 @@ export function NavBar() {
           {/* Right Side */}
           <div className="hidden md:flex gap-1 items-center">
             {/* <ThemeToggle /> */}
+            <ConnectButton />
             <ChainSelect />
             <WalletSelect />
           </div>
