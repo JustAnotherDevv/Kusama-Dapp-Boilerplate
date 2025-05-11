@@ -2,6 +2,10 @@
 
 A modern full-stack dApp development boilerplate for building on Westend Asset Hub. This project combines Polkadot and EVM wallet connectivity with a seamless interface for interacting with native Substrate precompiles, pallets, and Solidity smart contracts deployed to Westend Asset Hub.
 
+<p align="center">
+  <img src="/screenshot.png" alt="Dapp" width="1000" height="auto">
+</p>
+
 ## Features
 
 ### EVM + Polkadot Wallet Integration
