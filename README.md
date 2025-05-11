@@ -23,6 +23,10 @@ A modern full-stack dApp development boilerplate for building on Westend Asset H
 - Modern React + TypeScript + Vite setup
 - tyled with Tailwind CSS and shadcn/ui
 
+### Vesting Module
+
+This project also includes the mock interface for the precompile vesting module which I created based on the provided ideas from the issues in the hackathon github repo. It exposes emitted events, errors, public functions.
+
 ## Quick Start
 
 ### Clone the repository
