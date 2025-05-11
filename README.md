@@ -2,6 +2,27 @@
 
 A modern full-stack dApp development boilerplate for building on Westend Asset Hub. This project combines Polkadot and EVM wallet connectivity with a seamless interface for interacting with native Substrate precompiles, pallets, and Solidity smart contracts deployed to Westend Asset Hub.
 
+## Features
+
+### EVM + Polkadot Wallet Integration
+
+- Connect to Polkadot wallets (Polkadot.js, Talisman, SubWallet)
+- Connect to EVM wallets (MetaMask, Talisman)
+
+### Substrate Integration
+
+- Interact with native Substrate precompiles(mocked for now since the precompiles aren't live on Westend Asset Hub yet)
+
+### EVM Smart Contract Support
+
+- Integrated Hardhat development environment with Polkadot plugin
+- Auto-generated UI from contract ABIs
+
+### Developer Experience
+
+- Modern React + TypeScript + Vite setup
+- tyled with Tailwind CSS and shadcn/ui
+
 ## Quick Start
 
 ### Clone the repository
