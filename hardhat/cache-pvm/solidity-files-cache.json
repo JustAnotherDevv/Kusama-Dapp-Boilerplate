@@ -552,6 +552,78 @@
       "artifacts": [
         "SupplyChainVerifier"
       ]
+    },
+    "/Users/nevvdevv/Development/hackathons/eth-lisbon-2025/assethub-boilerplate/hardhat/contracts/VestingManager.sol": {
+      "lastModificationDate": 1746959861971,
+      "contentHash": "02ea3f6deb79494b606dcc98d850e701",
+      "sourceName": "contracts/VestingManager.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "parameters": "z"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./../interfaces/iVesting.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.26"
+      ],
+      "artifacts": [
+        "VestingManager"
+      ]
+    },
+    "/Users/nevvdevv/Development/hackathons/eth-lisbon-2025/assethub-boilerplate/hardhat/interfaces/iVesting.sol": {
+      "lastModificationDate": 1746955034185,
+      "contentHash": "b6a11ae8a083f4f496e4d32a09e1f772",
+      "sourceName": "interfaces/iVesting.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "parameters": "z"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.26"
+      ],
+      "artifacts": [
+        "IVesting"
+      ]
     }
   }
 }

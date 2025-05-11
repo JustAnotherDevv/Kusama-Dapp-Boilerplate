@@ -77,6 +77,14 @@ declare module "hardhat/types/runtime" {
       name: "SupplyChainVerifier",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.SupplyChainVerifier__factory>;
+    getContractFactory(
+      name: "VestingManager",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.VestingManager__factory>;
+    getContractFactory(
+      name: "IVesting",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IVesting__factory>;
 
     getContractAt(
       name: "AccessControl",
@@ -158,6 +166,16 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.SupplyChainVerifier>;
+    getContractAt(
+      name: "VestingManager",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.VestingManager>;
+    getContractAt(
+      name: "IVesting",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IVesting>;
 
     deployContract(
       name: "AccessControl",
@@ -223,6 +241,14 @@ declare module "hardhat/types/runtime" {
       name: "SupplyChainVerifier",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.SupplyChainVerifier>;
+    deployContract(
+      name: "VestingManager",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.VestingManager>;
+    deployContract(
+      name: "IVesting",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.IVesting>;
 
     deployContract(
       name: "AccessControl",
@@ -304,6 +330,16 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.SupplyChainVerifier>;
+    deployContract(
+      name: "VestingManager",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.VestingManager>;
+    deployContract(
+      name: "IVesting",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.IVesting>;
 
     // default types
     getContractFactory(
