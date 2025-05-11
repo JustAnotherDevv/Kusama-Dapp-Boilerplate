@@ -38,6 +38,11 @@ const navItems: NavItem[] = [
     href: "/contracts",
     items: [],
   },
+  {
+    title: "Substrate",
+    href: "/contracts",
+    items: [],
+  },
 ];
 
 export function NavBar() {
